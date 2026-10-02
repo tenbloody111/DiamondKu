@@ -66,7 +66,7 @@
   $("pCancel").onclick = () => { Hist.update(cur, { status: "Dibatalkan" }); closeModal("mPay"); toast("Pesanan dibatalkan"); refreshOrders(); };
   $("pPaid").onclick = () => { const o = Hist.update(cur, { status: "Berhasil", paidAt: Date.now() }); closeModal("mPay"); tone([[440, .1], [660, .15]]);
     if (!RM) setTimeout(() => tone([[659, .12], [784, .12], [1047, .3]]), 250);
-    $("dNo").textContent = "No. pesanan " + o.code; $("dSum").textContent = `${o.diamonds} Diamond untuk ID ${o.uid} - ${rp(o.total)} (simulasi)`; go("done"); };
+    $("dNo").textContent = "No. pesanan " + o.code; $("dSum").textContent = `${o.diamonds} Diamond untuk ID ${o.uid} - ${rp(o.total)} `; go("done"); };
   $("again").onclick = () => { S.uid = ""; S.dia = S.pay = S.bank = null; $("uid").value = ""; idHint(); renderProducts(); renderPays(); upd(); go("home"); };
   document.addEventListener("keydown", e => { if (e.key === "Escape") { closeModal("mConfirm"); closeModal("mPay"); } });
 
