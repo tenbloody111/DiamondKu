@@ -35,7 +35,7 @@ const CONFIG = {
   // enabled:false = matikan. discountPercent 100 = gratis.
   // endsAt: isi "2026-12-31T23:59:00" untuk waktu tetap, atau kosongkan dan pakai durationHours.
   // onlyProductIds: [] = semua produk, atau ["d70","d140"] = hanya itu.
-  flashSale: { enabled: true, durationHours: 24, endsAt: "", discountPercent: 20, onlyProductIds: [] },
+  flashSale: { enabled: true, durationHours: 24, endsAt: "", discountPercent: 100, onlyProductIds: [] },
 
   banners: [
     { title: "Bonus Diamond hingga 10%", subtitle: "Khusus top up pertama hari ini", gradient: "linear-gradient(120deg,#ff6a00,#c2185b)" },
