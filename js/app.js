@@ -44,7 +44,7 @@
   $("uid").oninput = e => { e.target.value = e.target.value.replace(/\D/g, ""); S.uid = ""; idHint(); upd(); };
   function cekId() { const v = $("uid").value, m = $("idmsg");
     if (v.length < 8) { m.className = "msg err"; m.textContent = "User ID harus 8-12 angka."; return; }
-    S.uid = v; m.className = "msg ok"; m.textContent = "Format ID valid (simulasi, tidak diverifikasi ke server game)."; upd(); }
+    S.uid = v; m.className = "msg ok"; m.textContent = "Format ID valid."; upd(); }
   $("cek").onclick = cekId; $("uid").onkeydown = e => { if (e.key === "Enter") cekId(); };
   $("q").oninput = () => { if (!$("home").classList.contains("on")) go("home"); renderProducts(); };
 
